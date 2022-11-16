@@ -1,0 +1,28 @@
+@import url("https://fonts.googleapis.com/css2?family=Playball&family=Rubik&family=Work+Sans&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Rubik", sans-serif;
+  /* font-family: "Work Sans", sans-serif; */
+  text-decoration: none;
+}
+
+nav,
+a {
+  width: 100%;
+  color: #000;
+  text-decoration: none;
+}
+
+.removeScroll ::-webkit-scrollbar {
+  width: 12px;
+}
+
+.LW {
+  color: #fff !important;
+}
+
+.play {
+  font-family: "Playball", cursive !important;
+}
