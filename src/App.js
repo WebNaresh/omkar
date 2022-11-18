@@ -8,6 +8,7 @@ import Course from "./components/pages/Courses/Course";
 import Blog from "./components/pages/Blog/Blog";
 import BlogForm from "./components/pages/Blog/BlogForm";
 import Contact from "./components/pages/Contact/Contact";
+import Fee from "./components/pages/Fee/Fee";
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
         <Route path="/login" element={<User />} />
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
+        <Route path="/fee" element={<Fee />} />
         <Route path="/course" element={<Course />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="/blog" element={<Blog />} />

@@ -7,6 +7,7 @@ import Header from "../../Header";
 import AboutCard from "./AboutCard";
 import AboutMain from "./AboutMain";
 import Footer from "../../Footer";
+import Prinmsg from "./Prinmsg";
 
 const About = () => {
   return (
@@ -79,6 +80,7 @@ const About = () => {
       </Container>
       <AboutCard />
       <AboutMain />
+      <Prinmsg />
       <Footer />
     </>
   );

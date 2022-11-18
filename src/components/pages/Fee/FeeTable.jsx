@@ -90,36 +90,56 @@ TablePaginationActions.propTypes = {
 
 const mainRow = [
   {
-    Subject: "C++",
     Faculaty: "bca",
-    Sem: "1",
-    SubjectCode: "m500",
-    marks: "100",
+    sem: "1",
+    Fee: "20000",
+    intake: "50",
   },
   {
-    Subject: "C++",
     Faculaty: "bca",
-    Sem: "1",
-    SubjectCode: "m500",
-    marks: "100",
+    sem: "2",
+    Fee: "20000",
+    intake: "50",
   },
   {
-    Subject: "C++",
     Faculaty: "bca",
-    Sem: "1",
-    SubjectCode: "m500",
-    marks: "100",
+    sem: "3",
+    Fee: "20000",
+    intake: "50",
   },
   {
-    Subject: "C++",
     Faculaty: "bca",
-    Sem: "1",
-    SubjectCode: "m500",
-    marks: "100",
+    sem: "4",
+    Fee: "20000",
+    intake: "50",
+  },
+  {
+    Faculaty: "bcom",
+    sem: "1",
+    Fee: "20000",
+    intake: "50",
+  },
+  {
+    Faculaty: "bcom",
+    sem: "1",
+    Fee: "20000",
+    intake: "50",
+  },
+  {
+    Faculaty: "ba",
+    sem: "1",
+    Fee: "20000",
+    intake: "50",
+  },
+  {
+    Faculaty: "bsc",
+    sem: "3",
+    Fee: "20000",
+    intake: "50",
   },
 ];
 
-export default function CTable() {
+export default function FeeTable() {
   const [page, setPage] = React.useState(0);
   const [rowsPerPage, setRowsPerPage] = React.useState(5);
 
@@ -160,11 +180,10 @@ export default function CTable() {
     <TableContainer component={Paper}>
       <Table sx={{ minWidth: 500 }} aria-label="custom pagination table">
         <TableHead>
-          <StyledTableCell component="th">Subjets</StyledTableCell>
-          <StyledTableCell align="center">Faculaty</StyledTableCell>
-          <StyledTableCell align="center">Sem</StyledTableCell>
-          <StyledTableCell align="center">SubjectCode</StyledTableCell>
-          <StyledTableCell align="right">marks</StyledTableCell>
+          <StyledTableCell component="th">Faculaty</StyledTableCell>
+          <StyledTableCell align="center">Semester</StyledTableCell>
+          <StyledTableCell align="center">Fee</StyledTableCell>
+          <StyledTableCell align="center">Intake</StyledTableCell>
         </TableHead>
         <TableBody>
           {(rowsPerPage > 0
@@ -175,11 +194,10 @@ export default function CTable() {
             : mainRow
           ).map((row, index) => (
             <StyledTableRow key={index}>
-              <TableCell scope="row">{row.Subject}</TableCell>
-              <TableCell align="center">{row.Faculaty}</TableCell>
-              <TableCell align="center">{row.Sem}</TableCell>
-              <TableCell align="center">{row.SubjectCode}</TableCell>
-              <TableCell align="right">{row.marks}</TableCell>
+              <TableCell scope="row">{row.Faculaty}</TableCell>
+              <TableCell align="center">{row.sem}</TableCell>
+              <TableCell align="center">{row.Fee}</TableCell>
+              <TableCell align="center">{row.intake}</TableCell>
             </StyledTableRow>
           ))}
 
@@ -189,7 +207,7 @@ export default function CTable() {
             </TableRow>
           )}
         </TableBody>
-        {/* <TableFooter>
+        <TableFooter>
           <TableRow>
             <TablePagination
               rowsPerPageOptions={[5, 10, 25, { label: "All", value: -1 }]}
@@ -208,7 +226,7 @@ export default function CTable() {
               ActionsComponent={TablePaginationActions}
             />
           </TableRow>
-        </TableFooter> */}
+        </TableFooter>
       </Table>
     </TableContainer>
   );

@@ -3,11 +3,11 @@ import { Box } from "@mui/system";
 import React from "react";
 import Appbar from "../../Appbar";
 import Header from "../../Header";
-import CTable from "./CTable";
+// import CTable from "./CTable";
 import Footer from "../../Footer";
-// import GridCard from "../../NotUse/GridCard";
+import FeeTable from "./FeeTable";
 
-const Course = () => {
+const Fee = () => {
   return (
     <>
       <Appbar />
@@ -17,23 +17,21 @@ const Course = () => {
         sx={{ marginTop: "10px", marginBottom: "50px", textAlign: "center" }}
       >
         <Typography variant="h2" fontSize={"2.7em"}>
-          Course and More
+          Fee Structure
         </Typography>
 
         <Typography variant="span" fontSize={".9em"}>
-          We providing best course and lot of more
+          Here you got all info about fee structure
         </Typography>
       </Box>
 
       <Container>
-        <CTable />
+        <FeeTable />
       </Container>
 
-      {/* <Footer /> */}
-
-      {/* <GridCard /> */}
+      <Footer />
     </>
   );
 };
 
-export default Course;
+export default Fee;
